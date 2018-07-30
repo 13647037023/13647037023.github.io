@@ -139,6 +139,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux之makefile" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/30/Linux之makefile/">Makefile学习</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/30/Linux之makefile/" class="archive-article-date">
+  	<time datetime="2018-07-30T07:10:58.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>俗话说：</p>
+<blockquote>
+<p>makefile关系到了整个工程的编译规则。会不会写makefile，从一个侧面说明了一个人是否具备完成大型工程的能力。  </p>
+</blockquote>
+<p>因为工作原因，也不得不接触Linux下程序的编译。为此，借鉴了陈皓（CSDN）的编写makefile一文加以学习。  </p>
+<hr>
+<h3 id="程序的编译和链接"><a href="#程序的编译和链接" class="headerlink" title="程序的编译和链接"></a>程序的编译和链接</h3><ul>
+<li>无论是C、C++，首先要把源文件编译成中间代码文件即Object File，这个动作叫做编译（compile）；然后再把大量的Object File合成运行文件，这个动作叫做链接（link)  </li>
+<li>编译时，编译器须要的是语法的正确，函数与变量的声明的正确。对于后者，通常是你须要告诉编译器头文件的所在位置（头文件里应该仅仅是声明，而定义应该放在C/C++文件里），仅仅要全部的语法正确，编译器就能够编译出中间目标文件。一般来说，每一个源文件都应该对应于一个中间目标文件（O文件或是OBJ文件）。  </li>
+<li>链接时，主要是链接函数和全局变量，所以，我们能够使用这些中间目标文件（O文件或是OBJ文件）来链接我们的应用程序。链接器并不管函数所在的源文件，仅仅管函数的中间目标文件（Object File），在大多数时候，由于源文件太多，编译生成的中间目标文件太多，而在链接时须要明显地指出中间目标文件名称，这对于编译非常不方便，所以，我们要给中间目标文件打个包，在Windows下这样的包叫“库文件”（Library File)，也就是 .lib 文件，在UNIX下，是Archive File，也就是 .a 文件。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2018/07/30/Linux之makefile/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/30/Linux之makefile/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-My Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -306,6 +392,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">第一篇</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
             
             <div class="clearfix"></div>
