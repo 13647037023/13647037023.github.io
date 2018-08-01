@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.whitenight.top">
-  <title>小武污污</title>
+  <title>Linux下的EFL | 小武污污</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="from now on.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小武污污">
-<meta property="og:url" content="www.whitenight.top/index.html">
+  <meta name="description" content="1.ELF概念 ELF(Executable and Linking Format)是unix-like系统下的一种文件格式，它是一种对象文件的格式，用于定义不同类型的对象文件(Object files)中都放了什么东西、以及都以什么样的格式去放这些东西。它自最早在 System V 系统上出现后，被unix-like世界所广泛接受，作为缺省的二进制文件格式来使用。可以说，ELF是构成众多unix">
+<meta name="keywords" content="Linux,EFL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux下的EFL">
+<meta property="og:url" content="www.whitenight.top/2018/08/01/EFL/index.html">
 <meta property="og:site_name" content="小武污污">
-<meta property="og:description" content="from now on.">
+<meta property="og:description" content="1.ELF概念 ELF(Executable and Linking Format)是unix-like系统下的一种文件格式，它是一种对象文件的格式，用于定义不同类型的对象文件(Object files)中都放了什么东西、以及都以什么样的格式去放这些东西。它自最早在 System V 系统上出现后，被unix-like世界所广泛接受，作为缺省的二进制文件格式来使用。可以说，ELF是构成众多unix">
 <meta property="og:locale" content="zh_Hans">
+<meta property="og:updated_time" content="2018-08-01T06:57:02.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小武污污">
-<meta name="twitter:description" content="from now on.">
+<meta name="twitter:title" content="Linux下的EFL">
+<meta name="twitter:description" content="1.ELF概念 ELF(Executable and Linking Format)是unix-like系统下的一种文件格式，它是一种对象文件的格式，用于定义不同类型的对象文件(Object files)中都放了什么东西、以及都以什么样的格式去放这些东西。它自最早在 System V 系统上出现后，被unix-like世界所广泛接受，作为缺省的二进制文件格式来使用。可以说，ELF是构成众多unix">
   
     <link rel="alternative" href="/atom.xml" title="小武污污" type="application/atom+xml">
   
@@ -141,16 +143,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-EFL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-EFL" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/01/EFL/">Linux下的EFL</a>
+    <h1 class="article-title" itemprop="name">
+      Linux下的EFL
     </h1>
   
 
@@ -610,16 +610,24 @@ Notes at offset 0x00000188 with length 0x00000024:
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/01/EFL/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/31/gcc参数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gcc常用参数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -639,174 +647,14 @@ Notes at offset 0x00000188 with length 0x00000024:
 
 
 
-
   
-    <article id="post-gcc参数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/31/gcc参数/">gcc常用参数</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/31/gcc参数/" class="archive-article-date">
-  	<time datetime="2018-07-31T04:03:30.486Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>简介<br>gcc and g++  现在是gnu中最主要和最流行的c &amp; c++  编译器 .gcc/g++  在执行编译工作的时候，总共需要以下几步:<br>1.预处理,生成.i的文件[预处理器cpp]<br>2.将预处理后的文件不转换成汇编语言,生成文件.s[编译器egcs]<br>3.有汇编变为目标代码(机器代码)生成.o的文件[汇编器as]<br>4.连接目标代码,生成可执行程序[链接器ld]<br>
-        
-          <a class="article-more-a" href="/2018/07/31/gcc参数/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">gcc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/31/gcc参数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-makefile学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/makefile学习/">Makefile学习</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/30/makefile学习/" class="archive-article-date">
-  	<time datetime="2018-07-30T10:36:38.071Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>俗话说：</p>
-<blockquote>
-<p>makefile关系到了整个工程的编译规则。会不会写makefile，从一个侧面说明了一个人是否具备完成大型工程的能力。</p>
-</blockquote>
-<p>因为工作原因，也不得不接触Linux下程序的编译。为此，借鉴了陈皓（CSDN）的编写makefile一文加以学习。  </p>
-<hr>
-<h3 id="程序的编译和链接"><a href="#程序的编译和链接" class="headerlink" title="程序的编译和链接"></a>程序的编译和链接</h3><ul>
-<li>无论是C、C++，首先要把源文件编译成中间代码文件即Object File，这个动作叫做编译（compile）；然后再把大量的Object File合成运行文件，这个动作叫做链接（link)  </li>
-<li>编译时，编译器须要的是语法的正确，函数与变量的声明的正确。对于后者，通常是你须要告诉编译器头文件的所在位置（头文件里应该仅仅是声明，而定义应该放在C/C++文件里），仅仅要全部的语法正确，编译器就能够编译出中间目标文件。一般来说，每一个源文件都应该对应于一个中间目标文件（O文件或是OBJ文件）。  </li>
-<li>链接时，主要是链接函数和全局变量，所以，我们能够使用这些中间目标文件（O文件或是OBJ文件）来链接我们的应用程序。链接器并不管函数所在的源文件，仅仅管函数的中间目标文件（Object File），在大多数时候，由于源文件太多，编译生成的中间目标文件太多，而在链接时须要明显地指出中间目标文件名称，这对于编译非常不方便，所以，我们要给中间目标文件打个包，在Windows下这样的包叫“库文件”（Library File)，也就是 .lib 文件，在UNIX下，是Archive File，也就是 .a 文件。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/07/30/makefile学习/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/makefile学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -829,8 +677,8 @@ Notes at offset 0x00000188 with length 0x00000024:
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
