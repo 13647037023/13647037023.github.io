@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="小武污污">
 <meta property="og:description" content="1.ELF概念 ELF(Executable and Linking Format)是unix-like系统下的一种文件格式，它是一种对象文件的格式，用于定义不同类型的对象文件(Object files)中都放了什么东西、以及都以什么样的格式去放这些东西。它自最早在 System V 系统上出现后，被unix-like世界所广泛接受，作为缺省的二进制文件格式来使用。可以说，ELF是构成众多unix">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:updated_time" content="2018-08-01T07:02:37.261Z">
+<meta property="og:updated_time" content="2018-08-01T07:10:01.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下的EFL">
 <meta name="twitter:description" content="1.ELF概念 ELF(Executable and Linking Format)是unix-like系统下的一种文件格式，它是一种对象文件的格式，用于定义不同类型的对象文件(Object files)中都放了什么东西、以及都以什么样的格式去放这些东西。它自最早在 System V 系统上出现后，被unix-like世界所广泛接受，作为缺省的二进制文件格式来使用。可以说，ELF是构成众多unix">
@@ -164,23 +164,21 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>1.ELF概念</p>
-<pre><code>ELF(Executable and Linking Format)是unix-like系统下的一种文件格式，它是一种对象文件的格式，用于定义不同类型的对象文件(Object files)中都放了什么东西、以及都以什么样的格式去放这些东西。它自最早在 System V 系统上出现后，被unix-like世界所广泛接受，作为缺省的二进制文件格式来使用。可以说，ELF是构成众多unix-like系统的基础之一。
-
-在unix-like平台下，二进制对象文件格式从a.out格式演变到COFF格式，再到现在的ELF格式。
-
-备注，在windows平台上，动态链接库文件所使用的是称为 PE（Portable Executable）的文件格式，PE主要在 COFF 文件头部之上增加了一些专用头部信息演变而来的。
-</code></pre><a id="more"></a>
+<p>ELF(Executable and Linking Format)是unix-like系统下的一种文件格式，它是一种对象文件的格式，用于定义不同类型的对象文件(Object files)中都放了什么东西、以及都以什么样的格式去放这些东西。它自最早在 System V 系统上出现后，被unix-like世界所广泛接受，作为缺省的二进制文件格式来使用。可以说，ELF是构成众多unix-like系统的基础之一。</p>
+<p>在unix-like平台下，二进制对象文件格式从a.out格式演变到COFF格式，再到现在的ELF格式。</p>
+<p>备注，在windows平台上，动态链接库文件所使用的是称为 PE（Portable Executable）的文件格式，PE主要在 COFF 文件头部之上增加了一些专用头部信息演变而来的。</p>
+<a id="more"></a>
 <p>2.在unix-like平台上使用ELF格式的文件有如下类型</p>
 <p>（1）可重定位的对象文件(Relocatable file)</p>
-<pre><code>其实就是由编译器编译生成目标对象文件（.o 文件）。链接器(link editor)将会拿一个或一些 Relocatable object files 作为输入，经链接处理后，生成一个可执行的对象文件 (Executable file) 或者一个可被共享的对象文件(Shared object file)。
-</code></pre><p>（2）可执行的对象文件(Executable file)</p>
-<pre><code>就是二进制可执行文件，比如ping，vim等二进制文件。
-</code></pre><p>（3）可被共享的对象文件(Shared object file)</p>
-<pre><code>就是unix-like平台下的动态库文件，比如.so文件。
-</code></pre><p>（4）core dump核心转储文件</p>
+<p>其实就是由编译器编译生成目标对象文件（.o 文件）。链接器(link editor)将会拿一个或一些 Relocatable object files 作为输入，经链接处理后，生成一个可执行的对象文件 (Executable file) 或者一个可被共享的对象文件(Shared object file)。</p>
+<p>（2）可执行的对象文件(Executable file)</p>
+<p>就是二进制可执行文件，比如ping，vim等二进制文件。</p>
+<p>（3）可被共享的对象文件(Shared object file)</p>
+<p>就是unix-like平台下的动态库文件，比如.so文件。</p>
+<p>（4）core dump核心转储文件</p>
 <p>3.ELF文件的格式</p>
-<pre><code>ELF文件由几个重要的部分组成，分别是ELF头（ELF header）、程序头表（program header table）和节头表（Section header table）等。实际上，一个文件中不一定包含全部内容，而且他们的位置也没有固定顺序，只有ELF头的位置是固定的，其余各部分的位置、大小等信息都由ELF头中的各项值来决定。
-</code></pre><p>（1）ELF头（ELF header） </p>
+<p>ELF文件由几个重要的部分组成，分别是ELF头（ELF header）、程序头表（program header table）和节头表（Section header table）等。实际上，一个文件中不一定包含全部内容，而且他们的位置也没有固定顺序，只有ELF头的位置是固定的，其余各部分的位置、大小等信息都由ELF头中的各项值来决定。</p>
+<p>（1）ELF头（ELF header） </p>
 <p>使用readelf  -h filename可以查看一个ELF文件的ELF头，如下：</p>
 <pre><code>ELF Header:
   Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
@@ -221,8 +219,7 @@
           Elf32_Half    e_shstrndx;             /* 节头部字符表索引 */
 } Elf32_Ehdr;
 </code></pre><p>（2）节头表（Section header table），自称为“节表”</p>
-<pre><code>sections 是在ELF文件里头，用以装载内容数据的最小容器。在ELF文件里面，每一个 sections 内都装载了性质属性都不一样的内容，比方：
-</code></pre><p>a).text section 里装载了可执行代码；<br>b).data section 里面装载了被初始化的数据；<br>c).bss section 里面装载了未被初始化的数据；<br>d).以.rec 打头的 sections 里面装载了重定位条目；<br>e).以.symtab 或者 .dynsym section 里面装载了符号信息；<br>f).以.strtab 或者 .dynstr section 里面装载了字符串信息；<br>g).其他还有为满足不同目的所设置的section，比方满足调试的目的、满足动态链接与加载的目的等等。</p>
+<p>sections 是在ELF文件里头，用以装载内容数据的最小容器。在ELF文件里面，每一个 sections 内都装载了性质属性都不一样的内容，比方：<br>a).text section 里装载了可执行代码；<br>b).data section 里面装载了被初始化的数据；<br>c).bss section 里面装载了未被初始化的数据；<br>d).以.rec 打头的 sections 里面装载了重定位条目；<br>e).以.symtab 或者 .dynsym section 里面装载了符号信息；<br>f).以.strtab 或者 .dynstr section 里面装载了字符串信息；<br>g).其他还有为满足不同目的所设置的section，比方满足调试的目的、满足动态链接与加载的目的等等。</p>
 <p>使用readelf  -S filename可以查看一个ELF文件的ELF头，如下：</p>
 <pre><code>Section Headers:
   [Nr] Name              Type             Address           Offset
@@ -313,10 +310,9 @@ Key to Flags:
   O (extra OS processing required) o (OS specific), p (processor specific)
 </code></pre><p>对应的数据结构是：</p>
 <p>（3）程序头表（program header table），自称为“段表”</p>
-<pre><code>section是作为输入，给链接器那去做链接用的，所以这些section也经常被称做输入section。链接器在链接可执行文件或动态库的过程中，它会把来自不同对象文件中的相同名称的 section 合并起来构成同名的 section。接着，它又会把带有相同属性(比方都是只读并可加载的)的 section 都合并成所谓 segment。segment作为链接器的输出，常被称为输出segment。
-
- 一个单独的 segment 通常会包含几个不同的 section，比方一个可被加载的、只读的segment 通常就会包括可执行代码.text section、只读的数据.rodata section 以及给动态链接器使用的符号.dymsym section等等。section是被链接器使用的，但是segment是被加载器所使用的。加载器会将所需要的segment加载到内存空间中运行。和用sections header table来指定一个ELF对象文件中到底有哪些section一样。也需要有一种信息结构来指出包含ELF对象文件有哪些segments，这种信息结构就是program header table。
-</code></pre><p>使用readelf  -l filename可以查看一个ELF文件的程序头表，如下：</p>
+<p>section是作为输入，给链接器那去做链接用的，所以这些section也经常被称做输入section。链接器在链接可执行文件或动态库的过程中，它会把来自不同对象文件中的相同名称的 section 合并起来构成同名的 section。接着，它又会把带有相同属性(比方都是只读并可加载的)的 section 都合并成所谓 segment。segment作为链接器的输出，常被称为输出segment。</p>
+<p>一个单独的 segment 通常会包含几个不同的 section，比方一个可被加载的、只读的segment 通常就会包括可执行代码.text section、只读的数据.rodata section 以及给动态链接器使用的符号.dymsym section等等。section是被链接器使用的，但是segment是被加载器所使用的。加载器会将所需要的segment加载到内存空间中运行。和用sections header table来指定一个ELF对象文件中到底有哪些section一样。也需要有一种信息结构来指出包含ELF对象文件有哪些segments，这种信息结构就是program header table。</p>
+<p>使用readelf  -l filename可以查看一个ELF文件的程序头表，如下：</p>
 <pre><code>Elf file type is EXEC (Executable file)
 Entry point 0x42dfe0
 There are 8 program headers, starting at offset 64
