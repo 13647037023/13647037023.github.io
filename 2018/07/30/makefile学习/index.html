@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="小武污污">
 <meta property="og:description" content="俗话说：  makefile关系到了整个工程的编译规则。会不会写makefile，从一个侧面说明了一个人是否具备完成大型工程的能力。  因为工作原因，也不得不接触Linux下程序的编译。为此，借鉴了陈皓（CSDN）的编写makefile一文加以学习。    程序的编译和链接 无论是C、C++，首先要把源文件编译成中间代码文件即Object File，这个动作叫做编译（compile）；然后再把大量">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:updated_time" content="2018-07-31T00:44:39.884Z">
+<meta property="og:updated_time" content="2018-08-06T09:29:42.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Makefile学习">
 <meta name="twitter:description" content="俗话说：  makefile关系到了整个工程的编译规则。会不会写makefile，从一个侧面说明了一个人是否具备完成大型工程的能力。  因为工作原因，也不得不接触Linux下程序的编译。为此，借鉴了陈皓（CSDN）的编写makefile一文加以学习。    程序的编译和链接 无论是C、C++，首先要把源文件编译成中间代码文件即Object File，这个动作叫做编译（compile）；然后再把大量">
@@ -82,8 +82,6 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="mail" target="_blank" href="/13647037023@163.com" title="mail"><i class="icon-mail"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
@@ -117,8 +115,6 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="mail" target="_blank" href="/13647037023@163.com" title="mail"><i class="icon-mail"></i></a>
-			        
 				</div>
 			</nav>
 
@@ -161,6 +157,33 @@
         
       </header>
     
+	<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#程序的编译和链接"><span class="toc-number">1.</span> <span class="toc-text">程序的编译和链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Makefile介绍"><span class="toc-number">2.</span> <span class="toc-text">Makefile介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Makefile总述"><span class="toc-number">3.</span> <span class="toc-text">Makefile总述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#书写规则"><span class="toc-number">4.</span> <span class="toc-text">书写规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#书写命令"><span class="toc-number">5.</span> <span class="toc-text">书写命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用变量"><span class="toc-number">6.</span> <span class="toc-text">使用变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用条件推断"><span class="toc-number">7.</span> <span class="toc-text">使用条件推断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用函数"><span class="toc-number">8.</span> <span class="toc-text">使用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#make-的运行"><span class="toc-number">9.</span> <span class="toc-text">make 的运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隐含规则"><span class="toc-number">10.</span> <span class="toc-text">隐含规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#老式风格的“后缀规则”"><span class="toc-number">11.</span> <span class="toc-text">老式风格的“后缀规则”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隐含规则搜索算法"><span class="toc-number">12.</span> <span class="toc-text">隐含规则搜索算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用make-更新函数库文件"><span class="toc-number">13.</span> <span class="toc-text">使用make 更新函数库文件</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <p>俗话说：</p>
@@ -1100,6 +1123,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#程序的编译和链接"><span class="toc-number">1.</span> <span class="toc-text">程序的编译和链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Makefile介绍"><span class="toc-number">2.</span> <span class="toc-text">Makefile介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Makefile总述"><span class="toc-number">3.</span> <span class="toc-text">Makefile总述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#书写规则"><span class="toc-number">4.</span> <span class="toc-text">书写规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#书写命令"><span class="toc-number">5.</span> <span class="toc-text">书写命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用变量"><span class="toc-number">6.</span> <span class="toc-text">使用变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用条件推断"><span class="toc-number">7.</span> <span class="toc-text">使用条件推断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用函数"><span class="toc-number">8.</span> <span class="toc-text">使用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#make-的运行"><span class="toc-number">9.</span> <span class="toc-text">make 的运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隐含规则"><span class="toc-number">10.</span> <span class="toc-text">隐含规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#老式风格的“后缀规则”"><span class="toc-number">11.</span> <span class="toc-text">老式风格的“后缀规则”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隐含规则搜索算法"><span class="toc-number">12.</span> <span class="toc-text">隐含规则搜索算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用make-更新函数库文件"><span class="toc-number">13.</span> <span class="toc-text">使用make 更新函数库文件</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>

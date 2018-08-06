@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="小武污污">
 <meta property="og:description" content="简介gcc and g++  现在是gnu中最主要和最流行的c &amp;amp; c++  编译器 .gcc/g++  在执行编译工作的时候，总共需要以下几步:1.预处理,生成.i的文件[预处理器cpp]2.将预处理后的文件不转换成汇编语言,生成文件.s[编译器egcs]3.有汇编变为目标代码(机器代码)生成.o的文件[汇编器as]4.连接目标代码,生成可执行程序[链接器ld]">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:updated_time" content="2018-07-31T07:01:47.105Z">
+<meta property="og:updated_time" content="2018-08-06T09:29:32.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gcc常用参数">
 <meta name="twitter:description" content="简介gcc and g++  现在是gnu中最主要和最流行的c &amp;amp; c++  编译器 .gcc/g++  在执行编译工作的时候，总共需要以下几步:1.预处理,生成.i的文件[预处理器cpp]2.将预处理后的文件不转换成汇编语言,生成文件.s[编译器egcs]3.有汇编变为目标代码(机器代码)生成.o的文件[汇编器as]4.连接目标代码,生成可执行程序[链接器ld]">
@@ -82,8 +82,6 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="mail" target="_blank" href="/13647037023@163.com" title="mail"><i class="icon-mail"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
@@ -117,8 +115,6 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="mail" target="_blank" href="/13647037023@163.com" title="mail"><i class="icon-mail"></i></a>
-			        
 				</div>
 			</nav>
 
@@ -161,6 +157,33 @@
         
       </header>
     
+	<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <p>简介<br>gcc and g++  现在是gnu中最主要和最流行的c &amp; c++  编译器 .gcc/g++  在执行编译工作的时候，总共需要以下几步:<br>1.预处理,生成.i的文件[预处理器cpp]<br>2.将预处理后的文件不转换成汇编语言,生成文件.s[编译器egcs]<br>3.有汇编变为目标代码(机器代码)生成.o的文件[汇编器as]<br>4.连接目标代码,生成可执行程序[链接器ld]<br><a id="more"></a><br>GCC能够处理的后缀有:<br>a. <em>.c </em>.C (C语言)<br>b. <em>.cxx </em>.cc (C++ 语言)<br>c. <em>.m (面向对象的C)<br>d. </em>.i (预处理后的C语言源文件)<br>e. <em>.ii (预处理后的C++ 语言源文件)<br>f. </em>.s <em>.S (汇编语言)<br>h. </em>.h (头文件)</p>
@@ -313,6 +336,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
