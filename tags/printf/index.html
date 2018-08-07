@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.whitenight.top">
-  <title>小武污污</title>
+  <title>Tag: printf() | 小武污污</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="from now on.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="小武污污">
-<meta property="og:url" content="www.whitenight.top/index.html">
+<meta property="og:url" content="www.whitenight.top/tags/printf/index.html">
 <meta property="og:site_name" content="小武污污">
 <meta property="og:description" content="from now on.">
 <meta property="og:locale" content="zh_Hans">
@@ -139,212 +139,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-C数据类型与printf()输出" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/08/07/C数据类型与printf()输出/" class="archive-article-date">
+  	<time datetime="2018-08-07T11:02:31.285Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/07/C数据类型与printf()输出/">C语言数据类型与printf()输出</a>
+      <a class="archive-article-title" href="/2018/08/07/C数据类型与printf()输出/">C语言数据类型与printf()输出</a>
     </h1>
   
 
-        
-        <a href="/2018/08/07/C数据类型与printf()输出/" class="archive-article-date">
-  	<time datetime="2018-08-07T11:02:31.285Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="C-数据类型"><a href="#C-数据类型" class="headerlink" title="C 数据类型"></a>C 数据类型</h2><p>在 C 语言中，变量的类型决定了变量存储占用的空间，以及如何解释存储的位模式。</p>
-<h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储大小/Byte</th>
-<th>值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>char</td>
-<td>1</td>
-<td>-128 到 127 或 0 到 255</td>
-</tr>
-<tr>
-<td>unsigned char</td>
-<td>1</td>
-<td>0 到 255</td>
-</tr>
-<tr>
-<td>signed char</td>
-<td>1</td>
-<td>-128 到 127</td>
-</tr>
-<tr>
-<td>int</td>
-<td>2 或 4</td>
-<td>-32,768 到 32,767 或 -2,147,483,648 到 2,147,483,647</td>
-</tr>
-<tr>
-<td>unsigned int</td>
-<td>2 或 4</td>
-<td>0 到 65,535 或 0 到 4,294,967,295</td>
-</tr>
-<tr>
-<td>short</td>
-<td>2</td>
-<td>-32,768 到 32,767</td>
-</tr>
-<tr>
-<td>unsigned short</td>
-<td>2</td>
-<td>0 到 65,535</td>
-</tr>
-<tr>
-<td>long</td>
-<td>4</td>
-<td>-2,147,483,648 到 2,147,483,647</td>
-</tr>
-<tr>
-<td>unsigned long</td>
-<td></td>
-<td>0 到 4,294,967,295</td>
-</tr>
-</tbody>
-</table>
-<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储大小/Byte</th>
-<th>值范围</th>
-<th>精度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>float</td>
-<td>4</td>
-<td>1.2E-38 到 3.4E+38</td>
-<td>6 位小数</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8</td>
-<td>2.3E-308 到 1.7E+308</td>
-<td>15位小数</td>
-</tr>
-<tr>
-<td>long double</td>
-<td>16</td>
-<td>3.4E-4932 到 1.1E+4932</td>
-<td>19位小数</td>
-</tr>
-</tbody>
-</table>
-<h3 id="void-类型"><a href="#void-类型" class="headerlink" title="void 类型"></a>void 类型</h3><table>
-<thead>
-<tr>
-<th>序号</th>
-<th>类型</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>函数返回为空</td>
-<td>C 中有各种函数都不返回值，或者您可以说它们返回空。不返回值的函数的返回类型为空例如 void exit (int status);</td>
-</tr>
-<tr>
-<td>2</td>
-<td>函数参数为空</td>
-<td>C 中有各种函数不接受任何参数。不带参数的函数可以接受一个 void。例如 int rand(void);</td>
-</tr>
-<tr>
-<td>3</td>
-<td>指针指向void</td>
-<td>类型为 void <em> 的指针代表对象的地址，而不是类型。例如，内存分配函数 void </em>malloc( size_t size ); 返回指向 void 的指针，可以转换为任何数据类型。 </td>
-</tr>
-</tbody>
-</table>
-<h2 id="printf-输出格式"><a href="#printf-输出格式" class="headerlink" title="printf()输出格式"></a>printf()输出格式</h2><h3 id="转换说明符"><a href="#转换说明符" class="headerlink" title="转换说明符"></a>转换说明符</h3><table>
-<thead>
-<tr>
-<th>转换说明符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>%a(%A)</td>
-<td>浮点数、十六进制数字和 p-(P-)记数法(C99)</td>
-</tr>
-<tr>
-<td>%c</td>
-<td>字符</td>
-</tr>
-<tr>
-<td>%d</td>
-<td>有符号十进制整数</td>
-</tr>
-<tr>
-<td>%f</td>
-<td>浮点数(包括 float 和 double)</td>
-</tr>
-<tr>
-<td>%e(%E)</td>
-<td>浮点数指数输出[ e-(E-)记数法]</td>
-</tr>
-<tr>
-<td>%g(%G)</td>
-<td>浮点数不显无意义的零“0”</td>
-</tr>
-<tr>
-<td>%i</td>
-<td>有符号十进制整数(与%d相同)</td>
-</tr>
-<tr>
-<td>%u</td>
-<td>无符号十进制整数</td>
-</tr>
-<tr>
-<td>%o</td>
-<td>八进制整数</td>
-</tr>
-<tr>
-<td>%x(%X)</td>
-<td>十六进制整数0f(0F)</td>
-</tr>
-<tr>
-<td>%p</td>
-<td>指针</td>
-</tr>
-<tr>
-<td>%s</td>
-<td>字符串</td>
-</tr>
-<tr>
-<td>%%</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -360,382 +182,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/07/C数据类型与printf()输出/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-Oracle学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/Oracle学习/">Oracle学习</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/06/Oracle学习/" class="archive-article-date">
-  	<time datetime="2018-08-06T01:06:59.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Oracle-用户和权限"><a href="#Oracle-用户和权限" class="headerlink" title="Oracle 用户和权限"></a>Oracle 用户和权限</h2><ul>
-<li>创建用户</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> 用户名 <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> 口令 [<span class="keyword">ACCOUNT</span> <span class="keyword">LOCK</span> | <span class="keyword">UNLOCK</span>]</span><br></pre></td></tr></table></figure>
-<p>LOCK | UNLOCK 创建用户时是否锁定，默认为锁定状态。锁定的用户无法正常的登录进行数据库操作。 </p>
-        
-          <a class="article-more-a" href="/2018/08/06/Oracle学习/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/06/Oracle学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-EFL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/01/EFL/">Linux下的EFL</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/01/EFL/" class="archive-article-date">
-  	<time datetime="2018-08-01T06:57:02.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-01</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.ELF概念</p>
-<p>ELF(Executable and Linking Format)是unix-like系统下的一种文件格式，它是一种对象文件的格式，用于定义不同类型的对象文件(Object files)中都放了什么东西、以及都以什么样的格式去放这些东西。它自最早在 System V 系统上出现后，被unix-like世界所广泛接受，作为缺省的二进制文件格式来使用。可以说，ELF是构成众多unix-like系统的基础之一。</p>
-<p>在unix-like平台下，二进制对象文件格式从a.out格式演变到COFF格式，再到现在的ELF格式。</p>
-<p>备注，在windows平台上，动态链接库文件所使用的是称为 PE（Portable Executable）的文件格式，PE主要在 COFF 文件头部之上增加了一些专用头部信息演变而来的。</p>
-        
-          <a class="article-more-a" href="/2018/08/01/EFL/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">EFL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/01/EFL/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-gcc参数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/31/gcc参数/">gcc常用参数</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/31/gcc参数/" class="archive-article-date">
-  	<time datetime="2018-07-31T04:03:30.486Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>简介<br>gcc and g++  现在是gnu中最主要和最流行的c &amp; c++  编译器 .gcc/g++  在执行编译工作的时候，总共需要以下几步:<br>1.预处理,生成.i的文件[预处理器cpp]<br>2.将预处理后的文件不转换成汇编语言,生成文件.s[编译器egcs]<br>3.有汇编变为目标代码(机器代码)生成.o的文件[汇编器as]<br>4.连接目标代码,生成可执行程序[链接器ld]<br>
-        
-          <a class="article-more-a" href="/2018/07/31/gcc参数/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">gcc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/31/gcc参数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-makefile学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/makefile学习/">Makefile学习</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/makefile学习/" class="archive-article-date">
-  	<time datetime="2018-07-30T10:36:38.071Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>俗话说：</p>
-<blockquote>
-<p>makefile关系到了整个工程的编译规则。会不会写makefile，从一个侧面说明了一个人是否具备完成大型工程的能力。</p>
-</blockquote>
-<p>因为工作原因，也不得不接触Linux下程序的编译。为此，借鉴了陈皓（CSDN）的编写makefile一文加以学习。  </p>
-<hr>
-<h3 id="程序的编译和链接"><a href="#程序的编译和链接" class="headerlink" title="程序的编译和链接"></a>程序的编译和链接</h3><ul>
-<li>无论是C、C++，首先要把源文件编译成中间代码文件即Object File，这个动作叫做编译（compile）；然后再把大量的Object File合成运行文件，这个动作叫做链接（link)  </li>
-<li>编译时，编译器须要的是语法的正确，函数与变量的声明的正确。对于后者，通常是你须要告诉编译器头文件的所在位置（头文件里应该仅仅是声明，而定义应该放在C/C++文件里），仅仅要全部的语法正确，编译器就能够编译出中间目标文件。一般来说，每一个源文件都应该对应于一个中间目标文件（O文件或是OBJ文件）。  </li>
-<li>链接时，主要是链接函数和全局变量，所以，我们能够使用这些中间目标文件（O文件或是OBJ文件）来链接我们的应用程序。链接器并不管函数所在的源文件，仅仅管函数的中间目标文件（Object File），在大多数时候，由于源文件太多，编译生成的中间目标文件太多，而在链接时须要明显地指出中间目标文件名称，这对于编译非常不方便，所以，我们要给中间目标文件打个包，在Windows下这样的包叫“库文件”（Library File)，也就是 .lib 文件，在UNIX下，是Archive File，也就是 .a 文件。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/07/30/makefile学习/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/makefile学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -757,10 +216,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
