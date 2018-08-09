@@ -9,14 +9,14 @@
   <title>Linux文件编辑命令 | 小武污污</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在很多情况下，我们都不得不使用最基本的vi编辑器来编辑文件。一个熟练vi的大神，编写的速度甚至比使用其他工具的人的速度还快。然而很多时候，我通过vi来修改一些文件，都不能将光标快速移动到我需要的修改的位置等等，效率大大降低。为此，编写此文来提升自己。">
-<meta name="keywords" content="Linux,vi">
+<meta name="keywords" content="Linux,vi&#x2F;vim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux文件编辑命令">
 <meta property="og:url" content="www.whitenight.top/2018/08/09/Linux文件编辑命令/index.html">
 <meta property="og:site_name" content="小武污污">
 <meta property="og:description" content="在很多情况下，我们都不得不使用最基本的vi编辑器来编辑文件。一个熟练vi的大神，编写的速度甚至比使用其他工具的人的速度还快。然而很多时候，我通过vi来修改一些文件，都不能将光标快速移动到我需要的修改的位置等等，效率大大降低。为此，编写此文来提升自己。">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:updated_time" content="2018-08-09T06:22:54.542Z">
+<meta property="og:updated_time" content="2018-08-09T09:54:07.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux文件编辑命令">
 <meta name="twitter:description" content="在很多情况下，我们都不得不使用最基本的vi编辑器来编辑文件。一个熟练vi的大神，编写的速度甚至比使用其他工具的人的速度还快。然而很多时候，我通过vi来修改一些文件，都不能将光标快速移动到我需要的修改的位置等等，效率大大降低。为此，编写此文来提升自己。">
@@ -164,7 +164,7 @@
       
         <p>在很多情况下，我们都不得不使用最基本的vi编辑器来编辑文件。一个熟练vi的大神，编写的速度甚至比使用其他工具的人的速度还快。然而很多时候，我通过vi来修改一些文件，都不能将光标快速移动到我需要的修改的位置等等，效率大大降低。为此，编写此文来提升自己。</p>
 <a id="more"></a>
-<h2 id="vi编辑器有3种基本工作模式"><a href="#vi编辑器有3种基本工作模式" class="headerlink" title="vi编辑器有3种基本工作模式"></a>vi编辑器有3种基本工作模式</h2><ul>
+<h2 id="vi-vim编辑器有3种基本工作模式"><a href="#vi-vim编辑器有3种基本工作模式" class="headerlink" title="vi/vim编辑器有3种基本工作模式"></a>vi/vim编辑器有3种基本工作模式</h2><ul>
 <li><p>命令行模式<br>该模式是进入vi编辑器后的默认模式。任何时候，不管用户处于何种模式，按下ESC键即可进入命令模式。在该模式下，用户可以输入vi命令，用户管理自己的文档。此时从键盘上输入的任何字符都被当做编辑命令来解释。若输入的字符是合法的vi命令，则vi在接收用户命令之后完成相应的动作。但需要注意的是，所输入的命令并不回显在屏幕上。若输入的字符不是vi命令，vi会响铃报警。</p>
 </li>
 <li><p>文本输入模式<br>在命令模式下输入命令i、附加命令a、打开命令o、修改命令c、取代命令r或替换命令s 都可以进入文本输入模式。在该模式下， 用户输入的任何字符都被vi当做文件内容保护起来，并将其显示在屏幕上。在文本输入过程中，若想回到命令模式下，按ESC键即可。</p>
@@ -172,7 +172,7 @@
 <li><p>末行模式<br>末行模式也称ex转义模式。在命令模式下，用户按“：”键即可进入末行模式下，此时vi会再显示窗口的最后一行显示一个“：”作为末行模式的说明符，等待用户输入命令。多数文件管理命令都是在此模式下执行的（如把编辑缓冲区的内容写到文件中等）。末行命令在执行完后，vi自动回到命令模式。如果要从命令模式转换到编辑模式，可以键入a或者i。如果需要从文本模式返回，则按ESC即可。在命令模式下输入“：”即可切换到末行模式下</p>
 </li>
 </ul>
-<h2 id="vi-命令"><a href="#vi-命令" class="headerlink" title="vi 命令"></a>vi 命令</h2><ul>
+<h2 id="vi-vim-命令"><a href="#vi-vim-命令" class="headerlink" title="vi/vim 命令"></a>vi/vim 命令</h2><ul>
 <li>进入vi的命令<ul>
 <li>vi filename : 打开或新建文件，并将光标置于第一行首</li>
 <li>vi +n filename : 打开文件，并将光标置于第n行首</li>
@@ -190,6 +190,37 @@
 <li>Ctrl  b ：向文件首翻一屏</li>
 <li>Ctrl  f  ：向文件尾翻一屏</li>
 <li>nz ：将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>移动光标<ul>
+<li>逐字符移动<ul>
+<li>h ：向左</li>
+<li>l ：向右</li>
+<li>j ：向下</li>
+<li>k ：向上</li>
+<li>nh ：移动n个字符</li>
+</ul>
+</li>
+<li>以单词为单位移动<ul>
+<li>w ：移到下一个单词的词首</li>
+<li>e ：跳至当前或下一个单词的词尾</li>
+<li>b ：跳至当前或上一个单词的词首</li>
+<li>nw ：表示移动n个单词</li>
+</ul>
+</li>
+<li>行内跳转<ul>
+<li>0 ：绝对行首</li>
+<li>^ ：行首第一个非空白字符</li>
+<li>$ ：绝对行尾</li>
+</ul>
+</li>
+<li>行间跳转<ul>
+<li>nG ：跳转到第n行</li>
+<li>G ：最后一行</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -218,6 +249,36 @@
 <li>ndd：删除当前行及其后n-1行</li>
 <li>x或X：删除一个字符，x删除光标后的，而X删除光标前的</li>
 <li>Ctrl u：删除输入方式下所输入的文本</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>复制命令</p>
+<ul>
+<li>yy ：复制当前行</li>
+<li>yw （ynw）：复制光标当前位置到下个单词词首内容 ，n代表数字</li>
+<li>ynG ：复制第n的内容</li>
+</ul>
+</li>
+<li><p>粘贴命令</p>
+<ul>
+<li>p ：如果删除的或复制的为整行内容，则粘贴到光标所在行的下方，如果复制或删除的内容为非整行，则粘贴至光标所在字符的后面</li>
+<li>P ：如果删除的或复制的为整行内容，则粘贴到光标所在行的上方，如果复制或删除的内容为非整行，则粘贴至光标所在字符的前面</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>撤销命令</p>
+<ul>
+<li>u ：撤销前一次编辑操作</li>
+<li>nu ：直接撤销n次操作</li>
+<li>Ctrl + r ：撤销最近一次撤销操作</li>
+</ul>
+</li>
+<li><p>可视化命令</p>
+<ul>
+<li>v ：按字符选取，键盘控制光标划过的区域被选取</li>
+<li>V ：按矩形选取，键盘控制光标划过的行被选取</li>
 </ul>
 </li>
 </ul>
@@ -292,7 +353,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">vi</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vi/vim</a>
         		</li>
       		
 		</ul>
@@ -439,14 +500,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vi</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">C</a>
               </li>
              
@@ -455,11 +508,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">gcc</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">vi/vim</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">gcc</a>
               </li>
              
               <li class="article-tag-list-item">
