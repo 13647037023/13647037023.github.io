@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.whitenight.top">
-  <title>Oracle学习 | 小武污污</title>
+  <title>Linux文件编辑命令 | 小武污污</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Oracle 用户和权限 创建用户  1CREATE USER 用户名 IDENTIFIED BY 口令 [ACCOUNT LOCK | UNLOCK] LOCK | UNLOCK 创建用户时是否锁定，默认为锁定状态。锁定的用户无法正常的登录进行数据库操作。">
-<meta name="keywords" content="Oracle">
+  <meta name="description" content="在很多情况下，我们都不得不使用最基本的vi编辑器来编辑文件。一个熟练vi的大神，编写的速度甚至比使用其他工具的人的速度还快。然而很多时候，我通过vi来修改一些文件，都不能将光标快速移动到我需要的修改的位置等等，效率大大降低。为此，编写此文来提升自己。">
+<meta name="keywords" content="Linux,vi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Oracle学习">
-<meta property="og:url" content="www.whitenight.top/2018/08/06/Oracle学习/index.html">
+<meta property="og:title" content="Linux文件编辑命令">
+<meta property="og:url" content="www.whitenight.top/2018/08/09/Linux文件编辑命令/index.html">
 <meta property="og:site_name" content="小武污污">
-<meta property="og:description" content="Oracle 用户和权限 创建用户  1CREATE USER 用户名 IDENTIFIED BY 口令 [ACCOUNT LOCK | UNLOCK] LOCK | UNLOCK 创建用户时是否锁定，默认为锁定状态。锁定的用户无法正常的登录进行数据库操作。">
+<meta property="og:description" content="在很多情况下，我们都不得不使用最基本的vi编辑器来编辑文件。一个熟练vi的大神，编写的速度甚至比使用其他工具的人的速度还快。然而很多时候，我通过vi来修改一些文件，都不能将光标快速移动到我需要的修改的位置等等，效率大大降低。为此，编写此文来提升自己。">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:updated_time" content="2018-08-06T08:59:20.375Z">
+<meta property="og:updated_time" content="2018-08-09T06:22:54.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oracle学习">
-<meta name="twitter:description" content="Oracle 用户和权限 创建用户  1CREATE USER 用户名 IDENTIFIED BY 口令 [ACCOUNT LOCK | UNLOCK] LOCK | UNLOCK 创建用户时是否锁定，默认为锁定状态。锁定的用户无法正常的登录进行数据库操作。">
+<meta name="twitter:title" content="Linux文件编辑命令">
+<meta name="twitter:description" content="在很多情况下，我们都不得不使用最基本的vi编辑器来编辑文件。一个熟练vi的大神，编写的速度甚至比使用其他工具的人的速度还快。然而很多时候，我通过vi来修改一些文件，都不能将光标快速移动到我需要的修改的位置等等，效率大大降低。为此，编写此文来提升自己。">
   
     <link rel="alternative" href="/atom.xml" title="小武污污" type="application/atom+xml">
   
@@ -139,442 +139,142 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Oracle学习" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux文件编辑命令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Oracle学习
+      Linux文件编辑命令
     </h1>
   
 
         
-        <a href="/2018/08/06/Oracle学习/" class="archive-article-date">
-  	<time datetime="2018-08-06T01:06:59.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+        <a href="/2018/08/09/Linux文件编辑命令/" class="archive-article-date">
+  	<time datetime="2018-08-09T03:42:40.237Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
 </a>
         
       </header>
     
 	<!-- 目录内容 -->
 
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-          <span class="btn-bg"></span>
-          <span class="btn-text">文章导航</span>
-          </p>
-	<div id="toc-article" class="toc-article">
-	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-		<strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Oracle-用户和权限"><span class="toc-number">1.</span> <span class="toc-text">Oracle 用户和权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据操作和查询"><span class="toc-number">2.</span> <span class="toc-text">数据操作和查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Oracle中的伪列"><span class="toc-number">3.</span> <span class="toc-text">Oracle中的伪列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Oracle-函数"><span class="toc-number">4.</span> <span class="toc-text">Oracle 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符函数"><span class="toc-number">4.1.</span> <span class="toc-text">字符函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字函数"><span class="toc-number">4.2.</span> <span class="toc-text">数字函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#日期函数"><span class="toc-number">4.3.</span> <span class="toc-text">日期函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换函数"><span class="toc-number">4.4.</span> <span class="toc-text">转换函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他单行函数"><span class="toc-number">4.5.</span> <span class="toc-text">其他单行函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚合函数"><span class="toc-number">4.6.</span> <span class="toc-text">聚合函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表空间、数据库对象"><span class="toc-number">5.</span> <span class="toc-text">表空间、数据库对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同义词"><span class="toc-number">5.1.</span> <span class="toc-text">同义词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#序列"><span class="toc-number">5.2.</span> <span class="toc-text">序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视图"><span class="toc-number">5.3.</span> <span class="toc-text">视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引"><span class="toc-number">5.4.</span> <span class="toc-text">索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表空间"><span class="toc-number">5.5.</span> <span class="toc-text">表空间</span></a></li></ol></li></ol>
-         </div>
-   <script type="text/javascript">
-	function showToc(){
-		var toc_article = document.getElementById("toc-article");
-		var show_toc_btn = document.getElementById("show-toc-btn");
-		toc_article.setAttribute("style","display:block");
-		show_toc_btn.setAttribute("style","display:none");
-		};
-	function showBtn(){
-		var toc_article = document.getElementById("toc-article");
-		var show_toc_btn = document.getElementById("show-toc-btn");
-		toc_article.setAttribute("style","display:none");
-		show_toc_btn.setAttribute("style","display:block");
-		};
-   </script>
-      
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Oracle-用户和权限"><a href="#Oracle-用户和权限" class="headerlink" title="Oracle 用户和权限"></a>Oracle 用户和权限</h2><ul>
-<li>创建用户</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> 用户名 <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> 口令 [<span class="keyword">ACCOUNT</span> <span class="keyword">LOCK</span> | <span class="keyword">UNLOCK</span>]</span><br></pre></td></tr></table></figure>
-<p>LOCK | UNLOCK 创建用户时是否锁定，默认为锁定状态。锁定的用户无法正常的登录进行数据库操作。 </p>
+        <p>在很多情况下，我们都不得不使用最基本的vi编辑器来编辑文件。一个熟练vi的大神，编写的速度甚至比使用其他工具的人的速度还快。然而很多时候，我通过vi来修改一些文件，都不能将光标快速移动到我需要的修改的位置等等，效率大大降低。为此，编写此文来提升自己。</p>
 <a id="more"></a>
-<p>尽管用户成功创建，但是还不能正常的登录Oracle数据库系统，因为该用户还没有任何权限。如果用户能够正常登录，至少需要CREATE SESSION 系统权限</p>
+<h2 id="vi编辑器有3种基本工作模式"><a href="#vi编辑器有3种基本工作模式" class="headerlink" title="vi编辑器有3种基本工作模式"></a>vi编辑器有3种基本工作模式</h2><ul>
+<li><p>命令行模式<br>该模式是进入vi编辑器后的默认模式。任何时候，不管用户处于何种模式，按下ESC键即可进入命令模式。在该模式下，用户可以输入vi命令，用户管理自己的文档。此时从键盘上输入的任何字符都被当做编辑命令来解释。若输入的字符是合法的vi命令，则vi在接收用户命令之后完成相应的动作。但需要注意的是，所输入的命令并不回显在屏幕上。若输入的字符不是vi命令，vi会响铃报警。</p>
+</li>
+<li><p>文本输入模式<br>在命令模式下输入命令i、附加命令a、打开命令o、修改命令c、取代命令r或替换命令s 都可以进入文本输入模式。在该模式下， 用户输入的任何字符都被vi当做文件内容保护起来，并将其显示在屏幕上。在文本输入过程中，若想回到命令模式下，按ESC键即可。</p>
+</li>
+<li><p>末行模式<br>末行模式也称ex转义模式。在命令模式下，用户按“：”键即可进入末行模式下，此时vi会再显示窗口的最后一行显示一个“：”作为末行模式的说明符，等待用户输入命令。多数文件管理命令都是在此模式下执行的（如把编辑缓冲区的内容写到文件中等）。末行命令在执行完后，vi自动回到命令模式。如果要从命令模式转换到编辑模式，可以键入a或者i。如果需要从文本模式返回，则按ESC即可。在命令模式下输入“：”即可切换到末行模式下</p>
+</li>
+</ul>
+<h2 id="vi-命令"><a href="#vi-命令" class="headerlink" title="vi 命令"></a>vi 命令</h2><ul>
+<li>进入vi的命令<ul>
+<li>vi filename : 打开或新建文件，并将光标置于第一行首</li>
+<li>vi +n filename : 打开文件，并将光标置于第n行首</li>
+<li>vi + filename : 打开文件，并将光标置于最后一行首</li>
+<li>vi +/pattern filename : 打开文件，并将光标置于第一个与pattern匹配的串处</li>
+<li>vi -r filename : 在上次正用vi编辑时发生系统崩溃，恢复filename</li>
+<li>vi filename…..filename : 打开多个文件，依次进行编辑<br>注意 ：上述命令中 需要写 “+”</li>
+</ul>
+</li>
+</ul>
 <ul>
-<li><p>数据库角色</p>
+<li>屏幕翻滚类命令<ul>
+<li>Ctrl  u ：向文件首翻半屏</li>
+<li>Ctrl  d ：向文件尾翻半屏</li>
+<li>Ctrl  b ：向文件首翻一屏</li>
+<li>Ctrl  f  ：向文件尾翻一屏</li>
+<li>nz ：将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。</li>
+</ul>
+</li>
+</ul>
 <ul>
-<li>CONNECT 角色，主要应用在临时用户，特别是那些不需要建表的的用户，通常只赋予<br>他们 CONNECT role。CONNECT 是使用 Oracle 的简单权限，拥有CONNECT 角色的用<br>户，可以与服务器建立连接会话（session，客户端对服务器连接，称为会话）。</li>
-<li>RESOURCE 角色，更可靠和正式的数据库用户可以授予 RESOURCE role。RESOURCE<br>提供给用户另外的权限以创建他们自己的表、序列、过程（procedure）、触发器（trigger）、索引（index）等。 </li>
-<li>DBA 角色，DBA role 拥有所有的系统权限—-包括无限制的空间限额和给其他用户授<br>予各种权限的能力。用户 SYSTEM 拥有 DBA 角色。</li>
+<li>插入文本类命令<ul>
+<li>i ：在光标前</li>
+<li>I ：在当前行首</li>
+<li>a：光标后</li>
+<li>A：在当前行尾</li>
+<li>o ：在当前行之下新开一行</li>
+<li>O：在当前行之上新开一行</li>
+<li>r ：替换当前字符</li>
+<li>R：替换当前字符及其后的字符，直至按ESC键</li>
+<li>s ：从当前光标位置处开始，以输入的文本替代指定数目的字符</li>
+<li>S ：删除指定数目的行，并以所输入文本代替之</li>
+<li>ncw 或nCW ：修改指定数目的字</li>
+<li>nCC ：修改指定数目的行</li>
 </ul>
 </li>
 </ul>
-<p>般情况下，一个普通的用户（如 SCOTT），拥有 CONNECT 和 RESOURCE 两个角色即可<br>进行常规的数据库开发工作。</p>
 <ul>
-<li>授权  </li>
+<li>删除命令<ul>
+<li>ndw 或 ndW ：删除光标处开始及其后的</li>
+<li>do ：删至行首</li>
+<li>d$ ：删至行尾</li>
+<li>ndd：删除当前行及其后n-1行</li>
+<li>x或X：删除一个字符，x删除光标后的，而X删除光标前的</li>
+<li>Ctrl u：删除输入方式下所输入的文本</li>
 </ul>
-<p>可以把某个权限授予某个角色，可以把权限、角色授予某个用户。系统权限只能由 DBA户授权，对象权限由拥有该对象的用户授权，授权语法是：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> 角色 | 权限 <span class="keyword">TO</span> 用户 （角色）</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <ul>
-<li>回收权限</li>
+<li>搜索及替换命令<ul>
+<li>/patter ：从光标开始出向文件尾搜索pattern</li>
+<li>?pattern ：从光标开始处向文件首搜索pattern</li>
+<li>n ：在同一方向重复上一次搜索命令</li>
+<li>N ：在反方向上重复上一次搜索命令</li>
+<li>:s/p1/p2/g ：将当前行中所有p1均用p2替代</li>
+<li>:n1,n2s/p1/p2/g ：将第n1至n2行中所有p1均用p2替换</li>
+<li>:g/p1/s//p2/g ：将文件中所有p1均用p2替换</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">REVOKE</span> 角色 | 权限 <span class="keyword">FROM</span>  用户（角色）</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <ul>
-<li>修改用户的密码</li>
+<li>选项设置<ul>
+<li>all ：列出所有选项设置情况</li>
+<li>term ：设置终端类型</li>
+<li>ignorance ：在搜索中忽略大小写</li>
+<li>list ：显示制表位（Ctrl + I）和行尾标志（$）</li>
+<li>number ：显示行号</li>
+<li>report ：显示由面向行的命令修改过的数目</li>
+<li>terse ：显示简短的警告信息</li>
+<li>warn ：在转到别的文件时若没保存当前文件则显示NO wrire信息</li>
+<li>nomagic ：允许在搜索模式中，使用前面不带“\”的特殊字符</li>
+<li>nowrapscan ：进制vi在搜索到达文件两端时，又从另一端开始</li>
+<li>mesg ：允许vi显示其他用户用write写到自己终端的信息</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> 用户名 <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> 新密码</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <ul>
-<li>修改用户处于锁定 （非锁定）状态</li>
+<li>末行模式命令<ul>
+<li>:n1,n2 co n3  ：将n1行到n2行之间的内容拷贝到第n3行下</li>
+<li>:n1,n2 m n3 ：将n1行到n2行之间的内容移至到第n3行下 </li>
+<li>:n1,n2 d ：将n1行到n2行之间的内容删除</li>
+<li>:w ：保存当前文件</li>
+<li>:e filename ：打开文件filename进行编辑</li>
+<li>:x ：保存当前文件并退出</li>
+<li>:q ：退出vi</li>
+<li>:q! ：不保存文件并退出vi</li>
+<li>:!command ：执行shell命令command</li>
+<li>:n1,n2 w!command ：将文件中n1行至n2行的内容作为command的输入并执行，若不指定n1,n2，则表示将整个文件内容作为command的输入</li>
+<li>:r!command ：将命令command的输出结果放到当前行</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> 用户名 <span class="keyword">ACCOUNT</span> <span class="keyword">LOCK</span> | <span class="keyword">UNLOCK</span></span><br></pre></td></tr></table></figure>
-<h2 id="数据操作和查询"><a href="#数据操作和查询" class="headerlink" title="数据操作和查询"></a>数据操作和查询</h2><ul>
-<li><p>Oracle SQL 语句由如下命令组成： </p>
+</li>
+</ul>
 <ul>
-<li>数据定义语言（DDL），包括 CREATE（创建）命令、ALTER（修改）命令、DROP（删<br>除）命令等。</li>
-<li>数据操纵语言（DML），包括 INSERT（插入）命令、UPDATE（更新）命令、DELETE<br>（删除）命令、SELECT … FOR UPDATE（查询）等。</li>
-<li>数据查询语言（DQL），包括基本查询语句、Order By 子句、Group By 子句。</li>
-<li>事务控制语言（TCL），包括 COMMIT（提交）命令、SAVEPOINT（保存点）命令、<br>ROLLBACK（回滚）命令。</li>
-<li>数据控制语言（DCL），GRANT（授权）命令、REVOKE（撤销）命令。</li>
+<li>寄存器操作<ul>
+<li>“?nyy ：将当前行及其下n行的内容保存到寄存器?中，其中？为一个字母，n为一个数字</li>
+<li>“?nyw ：将当前行及其下n个字保存到寄存器？中，其中?为一个字母，n为一个数字 </li>
+<li>“?nyl ：将当前行及其下n个字符保存到寄存器？中，其中?为一个字母，n为一个数字 </li>
+<li>“?p ：取出寄存器？中的内容并将其放到光标位置处。这里？可以是一个字母，也可以是一个数字 </li>
+<li>ndd ：将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中。</li>
 </ul>
 </li>
-<li><p>Oracle数据类型</p>
-</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CHAR(length)</td>
-<td>存储固定长度的字符串。参数 length 指定了长度，如果存储的字符串长度小于 length，用空格填充。默认长度是 1，最长不超过 2000 字节。</td>
-</tr>
-<tr>
-<td>VARCHAR2(length)</td>
-<td>存储可变长度的字符串。length 指定了该字符串的最大长度。默认长度是 1，最长不超过 4000 字符。</td>
-</tr>
-<tr>
-<td>NUMBER(p，s)</td>
-<td>既可以存储浮点数，也可以存储整数，p 表示数字的最大位数（如果是小数包括整数部分和小数部分和小数点，p 默认是 38 为），s 是指小数位数。</td>
-</tr>
-<tr>
-<td>DATE</td>
-<td>存储日期和时间，存储纪元、4 位年、月、日、时、分、秒，存储从公元前 4712 年 1 月 1 日到公元后 4712 年 12 月 31 日。</td>
-</tr>
-<tr>
-<td>TIMESTAMP</td>
-<td>不但存储日期的年月日，时分秒，以及秒后 6 位，同时包含时区</td>
-</tr>
-<tr>
-<td>CLOB</td>
-<td>存储大的文本，比如存储非结构化的 XML 文档</td>
-</tr>
-<tr>
-<td>BLOB</td>
-<td>存储二进制对象，如图形、视频、声音等。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>创建表和约束</li>
-</ul>
-<p>语法格式： ALTER TABLE 命令  </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span>  表名 <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> 约束名  约束内容</span><br></pre></td></tr></table></figure>
-<p>不论创建表还是约束，与 SQL Server 基本相同，注意：在 Oracle 中 default 是一个值，而 SQL Server 中 default 是一个约束，因此 Oracle 的 default 设置可以在建表的时候创建。</p>
-<p> 语法结构：简单查询</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *|列名|表达式 <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 条件 <span class="keyword">ORDER</span> <span class="keyword">BY</span></span><br></pre></td></tr></table></figure>
-<p> 语法结构： 根据结果集创建表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 标明 <span class="keyword">AS</span> <span class="keyword">SELECT</span> 语句</span><br></pre></td></tr></table></figure>
-<p>Oracle 中可以把查询的结果根据结果集中的表结构和数据形成一张新表。<br>如果只是复制表结构，只需使查询的条件不成立 ，就不会查询出任何数据，从而复制一个表结构。</p>
-<p>语法结构：数据插入</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名(列名 <span class="number">1</span>，列名 <span class="number">2</span>……) <span class="keyword">VALUES</span> (值 <span class="number">1</span>，值 <span class="number">2</span>…）</span><br></pre></td></tr></table></figure>
-<p> 语法结构：UPDATE操作</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 表名 <span class="keyword">SET</span>  列名<span class="number">1</span> = 值， 列名<span class="number">2</span> = 值....... <span class="keyword">where</span> 条件</span><br></pre></td></tr></table></figure>
-<p> 语法结构：DELETE操作</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 条件</span><br></pre></td></tr></table></figure>
-<p>语法结构：TRUNCATE</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> 表名</span><br></pre></td></tr></table></figure>
-<p>TRUNCATE 和 DELETE 都能把表中的数据全部删除，他们的区别是：<br>TRUNCATE 是 DDL命令，删除的数据不能恢复；DELETE 命令是DML命令，删除后的数据可以通过日志文件恢复<br>如果一个表中数据记录很多，TRUNCATE相对DELETE速度快</p>
-<ul>
-<li><p>高级查询</p>
-<ol>
-<li>在Oracle 查询中结果中，可能出现若干行相同的情况，那么可以使用 DISTINCT 消除重<br>复行。</li>
-<li>如果某条记录中有缺少的数据值，就是空值（NULL 值）。空值不等于 0 或者空格，空值<br>是指未赋值、未知或不可用的值。任何数据类型的列都可以包括 NULL 值，除非该列被定义<br>为非空或者主键。</li>
-<li>在 Where 子句中可以使用 IN 操作符来查询其列值在指定的列表中的行。</li>
-<li>在 WHERE 子句中，可以使用 BETWEEN 操作符来查询列值包含在指定区间内的行。</li>
-<li><p>在一些查询时，可能把握不准需要查询的确切值，比如百度搜索时输入关键字即可查询出相关的结果，这种查询称为模糊查询。模糊查询使用 LIKE 关键字通过字符匹配检索出所需要的数据行。字符匹配操作可以使用通配符“%”和“_”:</p>
-<ol>
-<li>% : 表示零个或者多个任意字符.</li>
-<li>_  : 代表一个任意字符.</li>
-</ol>
-</li>
-<li><p>集合运算就是将两个或者多个结果集组合成为一个结果集。集合运算包括：</p>
-<ol>
-<li>INTERSECT(交集)，返回两个查询共有的记录</li>
-<li>UNION ALL(并集)，返回各个查询的所有记录，包括重复记录</li>
-<li>UNION(并集)，返回各个查询的所有记录，不包括重复记录.</li>
-<li>MINUS(补集)，返回第一个查询检索出的记录减去第二个查询检索出的记录之后剩余的记录</li>
-</ol>
-</li>
-<li><p>内联接(inner join)、外联接(outer join)，外联接又分为左外联接(left outer join)和右外联接(right outer join)。OOracle 中对两个表或者若干表之间的外联接用（+）表示</p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="Oracle中的伪列"><a href="#Oracle中的伪列" class="headerlink" title="Oracle中的伪列"></a>Oracle中的伪列</h2><p>在 Oracle 的表的使用过程中，实际表中还有一些附加的列，称为伪列。伪列就像表中的列一样，但是在表中并不存储。伪列只能查询，不不能进行增删改操作。接下来学习两个伪列：ROWID 和 ROWNUM。</p>
-<ul>
-<li>ROWID  </li>
-</ul>
-<p>表中的每一行在数据文件中都有一个物理地址，ROWID 伪列返回的就是该行的物理地址。使用 ROWID 可以快速的定位表中的某一行。ROWID 值可以唯一的标识表中的的一行。由于 ROWID 返回的是该行的物理地址，因此使用 ROWID 可以显示行是如何存储的</p>
-<ul>
-<li>ROWNUM </li>
-</ul>
-<p>在查询的结果集中，ROWNUM 为结果集中每一行标识一个行号，第一行返回 1，第二行返回 2，以此类推。通过 ROWNUM 伪列可以限制查询结果集中返回的行数。</p>
-<p>ROWNUM 与 ROWID 不同，ROWID 是插入记录时生成，ROWNUM 是查询数据时生成。ROWID 标识的是行的物理地址。ROWNUM 标识的是查询结果中的行的次序。</p>
-<h2 id="Oracle-函数"><a href="#Oracle-函数" class="headerlink" title="Oracle 函数"></a>Oracle 函数</h2><p>Oracle SQL 提供了用于执行特定操作的专用函数。这些函数大大增强了 SQL 语言的功能。函数可以接受零个或者多个输入参数，并返回一个输出结果。Oracle 据库中主要使用两种类型的函数：</p>
-<ul>
-<li><p>单行函数：对每一个函数应用在表的记录中时，只能输入一行结果，返回一个结果，比如：MOD(x,y)返回 x 除以 y 的余数（x 和 y 可以是两个整数，也可以是表中的整数列）。常用的单行函数有：</p>
-<ol>
-<li>字符函数：对字符串操作。</li>
-<li>数字函数：对数字进行计算，返回一个数字。</li>
-<li>转换函数：可以将一种数据类型转换为另外一种数据类型。</li>
-<li>日期函数：对日期和时间进行处理。</li>
-</ol>
-</li>
-<li><p>聚合函数：聚合函数同时可以对多行数据进行操作，并返回一个结果。比如 SUM(x)返回结果集中 x 列的总合。</p>
-</li>
-</ul>
-<h3 id="字符函数"><a href="#字符函数" class="headerlink" title="字符函数"></a>字符函数</h3><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ASCII(x)</td>
-<td>返回字符 x 的 ASCII 码。</td>
-</tr>
-<tr>
-<td>CONCAT(x,y)</td>
-<td>连接字符串 x 和 y。</td>
-</tr>
-<tr>
-<td>INSTR(x, str [,start] [,n)</td>
-<td>在 x 中查找 str，可以指定从 start 开始，也可以指定从第 n 次开始。</td>
-</tr>
-<tr>
-<td>LENGTH(x)</td>
-<td>返回 x 的长度。</td>
-</tr>
-<tr>
-<td>LOWER(x)</td>
-<td>x 转换为小写。</td>
-</tr>
-<tr>
-<td>UPPER(x)</td>
-<td>x 转换为大写。</td>
-</tr>
-<tr>
-<td>LTRIM(x[,trim_str])</td>
-<td>把 x 的左边截去 trim_str 字符串，缺省截去空格。</td>
-</tr>
-<tr>
-<td>RTRIM(x[,trim_str])</td>
-<td>把 x 的右边截去 trim_str 字符串，缺省截去空格。</td>
-</tr>
-<tr>
-<td>TRIM([trim_str FROM] x)</td>
-<td>把 x 的两边截去 trim_str 字符串，缺省截去空格。</td>
-</tr>
-<tr>
-<td>REPLACE(x,old,new)</td>
-<td>在 x 中查找 old，并替换为 new。</td>
-</tr>
-<tr>
-<td>SUBSTR(x,start[,length])</td>
-<td>返回 x 的字串，从 start 处开始，截取 length 个字符，缺省 length，默认到结尾。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="数字函数"><a href="#数字函数" class="headerlink" title="数字函数"></a>数字函数</h3><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ABS(x)</td>
-<td>x 绝对值</td>
-<td>ABS(-3)=3</td>
-</tr>
-<tr>
-<td>ACOS(x)</td>
-<td>x 的反余弦</td>
-<td>ACOS(1)=0</td>
-</tr>
-<tr>
-<td>COS(x)</td>
-<td>余弦</td>
-<td>COS(1)=1.57079633</td>
-</tr>
-<tr>
-<td>CEIL(x)</td>
-<td>大于或等于 x 的最小值</td>
-<td>CEIL(5.4)=6</td>
-</tr>
-<tr>
-<td>FLOOR(x)</td>
-<td>小于或等于 x 的最大值</td>
-<td>FLOOR(5.8)=5</td>
-</tr>
-<tr>
-<td>LOG(x,y)</td>
-<td>x 为底 y 的对数</td>
-<td>LOG(2,4)=2</td>
-</tr>
-<tr>
-<td>MOD(x,y)</td>
-<td>x 除以 y 的余数</td>
-<td>MOD(8,3)=2</td>
-</tr>
-<tr>
-<td>POWER(x,y)</td>
-<td>x 的 y 次幂</td>
-<td>POWER(2,3)=8</td>
-</tr>
-<tr>
-<td>ROUND(x[,y])</td>
-<td>x 在第 y 位四舍五入</td>
-<td>ROUND(3.456,2)=3.46</td>
-</tr>
-<tr>
-<td>SQRT(x)</td>
-<td>x 的平方根</td>
-<td>SQRT(4)=2</td>
-</tr>
-<tr>
-<td>TRUNC(x[,y])</td>
-<td>x 在第 y 位截断</td>
-<td>TRUNC(3.456,2)=3.45</td>
-</tr>
-</tbody>
-</table>
-<p>说明：</p>
-<ul>
-<li><p>ROUND(X[,Y])，四舍五入<br>在缺省 y 时，默认 y=0；比如：ROUND(3.56)=4<br>y 是正整数，就是四舍五入到小数点后 y 位。ROUND(5.654,2)=5.65。<br>y 是负整数，四舍五入到小数点左边|y|位。ROUND(351.654,-2)=400。</p>
-</li>
-<li><p>TRUNC(x[,y])，直接截取，不四舍五入。<br>在缺省 y 时，默认 y=0；比如：TRUNC (3.56)=3。<br>y 是正整数，就是四舍五入到小数点后 y 位。TRUNC (5.654,2)=5.65.<br>y 是负整数，四舍五入到小数点左边|y|位。TRUNC (351.654,-2)=300。</p>
-</li>
-</ul>
-<h3 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h3><ul>
-<li><p>ADD_MONTHS(d,n)，在某一个日期 d 上，加上指定的月数 n，返回计算后的新日期。d 表示日期，n 表示要加的月数。</p>
-</li>
-<li><p>LAST_DAY(d)，返回指定日期当月的最后一天。</p>
-</li>
-<li><p>ROUND(d[,fmt])，返回一个以 fmt 为格式的四舍五入日期值，d 是日期，fmt 是格式模型。默认 fmt 为 DDD，即月中的某一天。</p>
-<ul>
-<li>如果 fmt 为“YEAR”则舍入到某年的 1 月 1 日，即前半年舍去，后半年作为下一年。</li>
-<li>如果 fmt 为“MONTH”则舍入到某月的 1 日，即前月舍去，后半月作为下一月。</li>
-<li>默认为“DDD”，即月中的某一天，最靠近的天，前半天舍去，后半天作为第二天。</li>
-<li>如果 fmt 为“DAY”则舍入到最近的周的周日，即上半周舍去，下半周作为下一周周日。</li>
-</ul>
-</li>
-<li><p>EXTRACT(fmt FROM d)，提取日期中的特定部分。<br>fmt 为：YEAR、MONTH、DAY、HOUR、MINUTE、SECOND。其中 YEAR、MONTH、DAY可以为 DATE 类型匹配，也可以与 TIMESTAMP 类型匹配；但是 HOUR、MINUTE、SECOND 必须与TIMESTAMP 类型匹配。</p>
-</li>
-</ul>
-<h3 id="转换函数"><a href="#转换函数" class="headerlink" title="转换函数"></a>转换函数</h3><ul>
-<li><p>TO_CHAR(d|n[,fmt])<br>把日期和数字转换为制定格式的字符串。</p>
-</li>
-<li><p>TO_DATE(x [,fmt])<br>把一个字符串以 fmt 格式转换为一个日期类型</p>
-</li>
-<li><p>TO_NUMBER(x[,fmt])<br>把一个字符串以 fmt 格式转换为一个数字。</p>
-</li>
-</ul>
-<h3 id="其他单行函数"><a href="#其他单行函数" class="headerlink" title="其他单行函数"></a>其他单行函数</h3><ul>
-<li><p>NVL(x, value)<br>如果 x 为空，返回 value，否则返回 x。</p>
-</li>
-<li><p>NVL2(x, value1, value2)<br>如果 x 非空，返回 value1，否则返回 value2。</p>
-</li>
-</ul>
-<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>作用</th>
-<th>语法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AVG</td>
-<td>平均值</td>
-<td>AVG(表达式)</td>
-</tr>
-<tr>
-<td>SUM</td>
-<td>求和</td>
-<td>SUM(表达式)</td>
-</tr>
-<tr>
-<td>MIN、MAX</td>
-<td>最小值、最大值</td>
-<td>MIN(表达式)、MAX(表达式)</td>
-</tr>
-<tr>
-<td>COUNT</td>
-<td>数据统计</td>
-<td>COUNT(表达式)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="表空间、数据库对象"><a href="#表空间、数据库对象" class="headerlink" title="表空间、数据库对象"></a>表空间、数据库对象</h2><h3 id="同义词"><a href="#同义词" class="headerlink" title="同义词"></a>同义词</h3><p>同义词（Synonym）是数据库对象的一个别名，Oracle 可以为表、视图、序列、过程、函数、程序包等指定一个别名。同义词有两种类型：</p>
-<ol>
-<li>私有同义词：拥有 CREATE SYNONYM 权限的用户（包括非管理员用户）即可创建私有同义词，创建的私有同义词只能由当前用户使用。</li>
-<li><p>公有同义词：系统管理员可以创建公有同义词，公有同义词可以被所有用户访问。</p>
-<p>语法结构：同义词</p>
-</li>
-</ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">OR</span> <span class="keyword">REPLACE</span>] [<span class="keyword">PUBLIC</span>] SYSNONYM [schema.]synonym_name </span><br><span class="line"><span class="keyword">FOR</span> [schema.]object_name</span><br></pre></td></tr></table></figure>
-<p>① CREATE [OR REPLACE：]表示在创建同义词时，如果该同义词已经存在，那么就用新<br>创建的同义词代替旧同义词。<br>② PULBIC：创建公有同义词时使用的关键字，一般情况下不需要创建公有同义词。<br>③ Oracle 中一个用户可以创建表、视图等多种数据库对象，一个用户和该用户下的所有数据库对象的集合称为 Schema（中文称为模式或者方案），用户名就是 Schema名。一个数据库对象的全称是：用户名.对象名，即 schema.object_name。</p>
-<p>语法结构：删除同义词</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> [<span class="keyword">PUBLIC</span>] <span class="keyword">SYNONYM</span> [schema.]sysnonym_name</span><br></pre></td></tr></table></figure>
-<p>① PUBLIC：删除公共同义词。<br>② 同义词的删除只能被拥有同义词对象的用户或者管理员删除。<br>③ 此命令只能删除同义词，不能删除同义词下的源对象。</p>
-<h3 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h3><p>序列(Sequence)是用来生成连续的整数数据的对象。序列常常用来作为主键中增长列，<br>序列中的可以升序生成，也可以降序生成。创建序列的语法是：</p>
-<p>语法结构：创建序列</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">SEQUENCE</span> sequence_name</span><br><span class="line">[<span class="keyword">START</span> <span class="keyword">WITH</span> <span class="keyword">num</span>]</span><br><span class="line">[<span class="keyword">INCREMENT</span> <span class="keyword">BY</span> <span class="keyword">increment</span>]</span><br><span class="line">[MAXVALUE <span class="keyword">num</span>|<span class="keyword">NOMAXVALUE</span>]</span><br><span class="line">[<span class="keyword">MINVALUE</span> <span class="keyword">num</span>|<span class="keyword">NOMINVALUE</span>]</span><br><span class="line">[<span class="keyword">CYCLE</span>|<span class="keyword">NOCYCLE</span>]</span><br><span class="line">[<span class="keyword">CACHE</span> <span class="keyword">num</span>|NOCACHE]</span><br></pre></td></tr></table></figure>
-<p>① START WITH：从某一个整数开始，升序默认值是 1，降序默认值是-1。<br>② INCREMENT BY：增长数。如果是正数则升序生成，如果是负数则降序生成。升序默认值是 1，降序默认值是-1。<br>③ MAXVALUE：指最大值。<br>④ NOMAXVALUE：这是最大值的默认选项，升序的最大值是：1027，降序默认值是-1。<br>⑤ MINVALUE：指最小值。<br>⑥ NOMINVALUE：这是默认值选项，升序默认值是 1，降序默认值是-1026。<br>⑦ CYCLE：表示如果升序达到最大值后，从最小值重新开始；如果是降序序列，达到最小值后，从最大值重新开始<br>⑧ NOCYCLE：表示不重新开始，序列升序达到最大值、降序达到最小值后就报错。默认 NOCYCLE。<br>⑨ CACHE：使用 CACHE 选项时，该序列会根据序列规则预生成一组序列号。保留在内存中，当使用下一个序列号时，可以更快的响应。当内存中的序列号用完时，系统再生成一组新的序列号，并保存在缓存中，这样可以提高生成序列号的效率。Oracle默认会生产 20 个序列号。<br>⑩ NOCACHE：不预先在内存中生成序列号。</p>
-<h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><p>视图（View）实际上是一张或者多张表上的预定义查询，这些表称为基表。从视图中查询信息与从表中查询信息的方法完全相同。只需要简单的 SELECT…FROM 即可。</p>
-<p>视图具有以下优点：</p>
-<ul>
-<li>可以限制用户只能通过视图检索数据。这样就可以对最终用户屏蔽建表时底层的基表。</li>
-<li>可以将复杂的查询保存为视图。可以对最终用户屏蔽一定的复杂性</li>
-<li>限制某个视图只能访问基表中的部分列或者部分行的特定数据。这样可以实现一定的安全性</li>
-<li>从多张基表中按一定的业务逻辑抽出用户关心的部分，形成一张虚拟表</li>
-</ul>
-<p>语法结构：创建视图</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">OR</span> <span class="keyword">REPLACE</span>] [&#123;<span class="keyword">FORCE</span>|NOFORCE&#125;] <span class="keyword">VIEW</span> view_name</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">SELECT</span>查询</span><br><span class="line">[<span class="keyword">WITH</span> <span class="keyword">READ</span> <span class="keyword">ONLY</span> <span class="keyword">CONSTRAINT</span>]</span><br></pre></td></tr></table></figure>
-<p>① OR REPLACE：如果视图已经存在，则替换旧视图。<br>② FORCE：即使基表不存在，也可以创建该视图，但是该视图不能正常使用，当基表创建成功后，视图才能正常使用<br>③ NOFORCE：如果基表不存在，无法创建视图，该项是默认选项<br>④ WITH READ ONLY：默认可以通过视图对基表执行增删改操作，但是有很多在基表上的限制（比如：基表中某列不能为空，但是该列没有出现在视图中，则不能通过视图执行 insert 操作），WITH READ ONLY 说明视图是只读视图，不能通过该视图进行增删改操作。现实开发中，基本上不通过视图对表中的数据进行增删改操作。</p>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>数据库中索引（Index）的概念与目录的概念非常类似。如果某列出现在查询的条件中，而该列的数据是无序的，查询时只能从第一行开始一行一行的匹配。创建索引就是对某些特定列中的数据排序，生成独立的索引表。在某列上创建索引后，如果该列出现在查询条件中，Oracle 会自动的引用该索引，先从索引表中查询出符合条件记录的 ROWID，由于 ROWID 是记录的物理地址，因此可以根据 ROWID 快速的定位到具体的记录，表中的数据非常多时，引用索引带来的查询效率非常可观。</p>
-<pre><code>提示：
-如果表中的某些字段经常被查询并作为查询的条件出现时，就应该考虑为该列创建索引。
-当从很多行的表中查询少数行时，也要考虑创建索引。有一条基本的准则是：当任何单个查询要检索的行少于或者等于整个表行数的 10%时，索引就非常有用
-</code></pre><p>Oracle 数据库会为表的主键和包含唯一约束的列自动创建索引。索引可以提高查询的效率，但是在数据增删改时需要更新索引，因此索引对增删改时会有负面影响.</p>
-<p>语法结构：创建索引</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">UNIQUE</span>] <span class="keyword">INDEX</span> index_name <span class="keyword">ON</span> </span><br><span class="line">table_name(column_name[,column_name…])</span><br></pre></td></tr></table></figure>
-<p>① UNIQUE:指定索引列上的值必须是唯一的。称为唯一索引<br>② index_name：指定索引名<br>③ tabl_name：指定要为哪个表创建索引<br>④ column_name：指定要对哪个列创建索引。我们也可以对多列创建索引；这种索引称为组合索引。</p>
-<h3 id="表空间"><a href="#表空间" class="headerlink" title="表空间"></a>表空间</h3><p>在数据库系统中，存储空间是较为重要的资源，合理利用空间，不但能节省空间，还可以提高系统的效率和工作性能。Oracle 可以存放海量数据，所有数据都在数据文件中存储。而数据文件大小受操作系统限制，并且过大的数据文件对数据的存取性能影响非常大。同时Oracle 是跨平台的数据库，Oracle 数据可以轻松的在不同平台上移植，那么如何才能提供统一存取格式的大容量呢？Oracle 采用表空间来解决。</p>
-<p>表空间只是一个逻辑概念，若干操作系统文件（文件可以不是很大）可以组成一个表空。表空间统一管理空间中的数据文件，一个数据文件只能属于一个表空间。一个数据库空间由若干个表空间组成。</p>
-<p>Oracle 中所有的数据（包括系统数据），全部保存在表空间中，常见的表空间有：</p>
-<ul>
-<li>系统表空间：存放系统数据，系统表空间在数据库创建时创建。表空间名称为SYSTEM。存放数据字典和视图以及数据库结构等重要系统数据信息，在运行时如果 SYSTEM 空间不足，对数据库影响会比较大，虽然在系统运行过程中可以通过命令扩充空间，但还是会影响数据库的性能，因此有必要在创建数据库时适当的把数据文件设置大一些。</li>
-<li>TMEP 表空间：临时表空间，安装数据库时创建，可以在运行时通过命令增大临时表空间。临时表空间的重要作用是数据排序。比如当用户执行了诸如 Order by 等命令后，服务器需要对所选取数据进行排序，如果数据很大，内存的排序区可能装不下太大数据，就需要把一些中间的排序结果写在硬盘的临时表空间中。</li>
-<li>用户表自定义空间：用户可以通过 CREATE TABLESPACE 命令创建表空间</li>
-</ul>
-<p>创建表空间需要考虑数据库对分区（Extent，一个 Oracle 分区是数据库文件中一段连续的空间，Oracle 分区是 Oracle 管理中最小的单位）的管理，比如当一个表创建后先申请一个分区，在 Insert 执行过程中，如果分区数据已满，需要重新申请另外的分区。如果一个数据库中的分区大小不一，创建表空间时需要考虑一系列问题。因此在 Oracle8i 之后，创建表空间都推荐使用“本地管理表空间”，这种表空间中的分区是一个固定大小的值，创建表空间的语法是：</p>
-<p>语法结构：创建表空间</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLESPACE</span> 空间名称</span><br><span class="line"><span class="keyword">DATAFILE</span> <span class="string">'文件名1'</span> <span class="keyword">SIZE</span> 数字M </span><br><span class="line">[,<span class="string">'文件名2'</span> <span class="keyword">SIZE</span> 数字….]</span><br><span class="line"><span class="keyword">EXTENT</span> <span class="keyword">MANAGEMENT</span> <span class="keyword">LOCAL</span> </span><br><span class="line"><span class="keyword">UNIFORM</span> <span class="keyword">SIZE</span> 数字M</span><br></pre></td></tr></table></figure>
-<p>① 文件名包括完整路径和文件名，每个数据文件定义了文件的初始大小，初始大小一<br>般以“M”为单位。一个表空间中可以有多个数据文件。<br>② EXTENT MANAGEMENT LOCAL 指明表空间类型是：本地管理表空间。本地管理表空间要求 Oracle 中的数据分区（Extent）大小统一。<br>③ UNIFORM SIZE：指定每个分区的统一大小。</p>
 
       
 
@@ -588,7 +288,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">vi</a>
         		</li>
       		
 		</ul>
@@ -607,18 +311,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/07/C数据类型与printf()输出/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          C语言数据类型与printf()输出
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/01/EFL/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux下的EFL</div>
+    <a href="/2018/08/07/C数据类型与printf()输出/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C语言数据类型与printf()输出</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -637,19 +332,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Oracle-用户和权限"><span class="toc-number">1.</span> <span class="toc-text">Oracle 用户和权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据操作和查询"><span class="toc-number">2.</span> <span class="toc-text">数据操作和查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Oracle中的伪列"><span class="toc-number">3.</span> <span class="toc-text">Oracle中的伪列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Oracle-函数"><span class="toc-number">4.</span> <span class="toc-text">Oracle 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符函数"><span class="toc-number">4.1.</span> <span class="toc-text">字符函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字函数"><span class="toc-number">4.2.</span> <span class="toc-text">数字函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#日期函数"><span class="toc-number">4.3.</span> <span class="toc-text">日期函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换函数"><span class="toc-number">4.4.</span> <span class="toc-text">转换函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他单行函数"><span class="toc-number">4.5.</span> <span class="toc-text">其他单行函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚合函数"><span class="toc-number">4.6.</span> <span class="toc-text">聚合函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表空间、数据库对象"><span class="toc-number">5.</span> <span class="toc-text">表空间、数据库对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同义词"><span class="toc-number">5.1.</span> <span class="toc-text">同义词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#序列"><span class="toc-number">5.2.</span> <span class="toc-text">序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视图"><span class="toc-number">5.3.</span> <span class="toc-text">视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引"><span class="toc-number">5.4.</span> <span class="toc-text">索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表空间"><span class="toc-number">5.5.</span> <span class="toc-text">表空间</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
