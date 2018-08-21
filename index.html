@@ -139,6 +139,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-redis学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/20/redis学习/">redis集群学习</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/20/redis学习/" class="archive-article-date">
+  	<time datetime="2018-08-20T12:00:30.665Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="集群的特点"><a href="#集群的特点" class="headerlink" title="集群的特点"></a>集群的特点</h2><ul>
+<li>集群架构特点：<ul>
+<li>所有的redis节点彼此互联(PING-PONG)机制，内部使用二进制协议优化传输速度和带宽</li>
+<li>节点的fail是通过集群中超过半数的节点检测失效时才生效</li>
+<li>客户端与redis节点直连，不需要中间proxy层。客户端不需要连接进群所有节点，连接集群中任何一个可用节点即可</li>
+<li>redis-cluster把所有的物理节点映射到【0-16383】个slot（哈希槽）上，cluster负责维护 node<->slot<->value</-></-></li>
+<li>集群使用公式CRC16(Key)&amp;16383计算key属于哪个槽：<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HASH_SLOT = CRC16(<span class="type">key</span>) mod <span class="number">16384</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2018/08/20/redis学习/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">集群</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/20/redis学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-LoadBalancing" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1076,6 +1169,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">集群</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">gcc</a>
               </li>
              
@@ -1084,11 +1185,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">负载均衡</a>
+                <a href="javascript:void(0)" class="js-tag color4">EFL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">EFL</a>
+                <a href="javascript:void(0)" class="js-tag color5">负载均衡</a>
               </li>
             
             <div class="clearfix"></div>
