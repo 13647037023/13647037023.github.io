@@ -139,6 +139,217 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-各种编码方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/22/各种编码方式/">编码及其常见问题</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/22/各种编码方式/" class="archive-article-date">
+  	<time datetime="2018-08-22T05:57:38.300Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-22</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在很多时候发现乱码，我只知道需要改变编码方式，却不知道其中的原理，这使我想要了解这其中的根本。<br>参考于 <a href="https://www.cnblogs.com/575dsj/p/7112767.html" target="_blank" rel="noopener">https://www.cnblogs.com/575dsj/p/7112767.html</a> 及 <a href="https://blog.csdn.net/u010234516/article/details/52853214" target="_blank" rel="noopener">https://blog.csdn.net/u010234516/article/details/52853214</a> ，受益匪浅。</p>
+        
+          <a class="article-more-a" href="/2018/08/22/各种编码方式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编码</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/22/各种编码方式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/21/正则表达式/">正则表达式</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/21/正则表达式/" class="archive-article-date">
+  	<time datetime="2018-08-21T02:01:19.993Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基础的正则表达式"><a href="#基础的正则表达式" class="headerlink" title="基础的正则表达式"></a>基础的正则表达式</h2><ul>
+<li><p>“.”（一个点）符号<br>点符号用于匹配除换行符之外的任意一个字符。</p>
+</li>
+<li><p>“<em> ” 符号<br>“</em> ”符号用于匹配前一个字符0次或任意多次。</p>
+</li>
+<li><p>“{n,m}” 符号<br>虽然“* ”可用于重复匹配前一个字符，但是却不能精确地控制匹配的重复次数，使用“{n,m}”符号则能更加灵活地控制字符的重复次数，典型的有以下3种形式：</p>
+<ul>
+<li>{n}    匹配前面的字符n次</li>
+<li>{n,}    匹配前面的字符至少n次以上（含n次）</li>
+<li>{n,m}   匹配前面的字符n到m次</li>
+</ul>
+</li>
+<li><p>“^” 符号<br>这个符号用于匹配开头的字符</p>
+</li>
+<li><p>“$” 符号<br>和上面的尖角号相对，“$”符号用于匹配尾部，“^$”则代表该行为空，因为^和$之间什么都没有。</p>
+</li>
+<li><p>“[ ]” 符号<br>用于匹配方括号内出现的任意字符</p>
+</li>
+<li><p>“\” 符号<br>为了表示作为一个字符的本意，就要使用“\”来转义，让它只代表字符本身</p>
+</li>
+<li><p>“\&lt;” 符号和“>” 符号<br>这两个符号分别用于界定单词的左边界和右边界</p>
+</li>
+<li><p>“\d” 符号<br>匹配一个数字，等价于[0-9] </p>
+</li>
+<li><p>“\b” 符号<br>匹配单词的边界</p>
+</li>
+<li><p>“\B” 符号<br>匹配非单词的边界</p>
+</li>
+<li><p>“\w” 符号<br>匹配字母、数字和下划线，等价于[A-Za-z0-9] </p>
+</li>
+<li><p>“\W” 符号<br>匹配非字母、非数字、非下划线，等价于[^A-Za-z0-9]</p>
+</li>
+<li><p>“\n” 符号<br>匹配一个换行符</p>
+</li>
+<li><p>“\r” 符号<br>匹配一个回车符</p>
+</li>
+<li><p>“\t” 符号<br>匹配一个制表符</p>
+</li>
+<li><p>“\f” 符号<br>匹配一个换页符</p>
+</li>
+<li><p>“\s” 符号<br>匹配任何空白字符</p>
+</li>
+<li><p>“\S” 符号<br>匹配任何非空白字符</p>
+</li>
+</ul>
+<h2 id="扩展的正则表达式"><a href="#扩展的正则表达式" class="headerlink" title="扩展的正则表达式"></a>扩展的正则表达式</h2><p>顾名思义，扩展的正则表达式一定是针对基础正则表示的一些补充。实际上，扩展正则表达式比基础正则表达式多了几个重要的符号。不过要注意的是，在使用这些扩展符号时，需要使用egrep命令。</p>
+<ul>
+<li><p>“?” 符号<br>“?” 符号用于匹配前一个字符0次或1次，所以 “ro?t” 仅能匹配rot 或 rt</p>
+</li>
+<li><p>“+” 符号<br>“+” 符号用于匹配前一个字符1次以上，所以 “ro+t” 就可以匹配rot、root等</p>
+</li>
+<li><p>“|” 符号<br>“|” 符号是“或”的意思，即多种可能的罗列，彼此间是一种分支关系</p>
+</li>
+<li><p>“()” 符号<br>“()”符号通常需要和“|”符号联合使用，用于枚举一系列可替换的字符。</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">正则表达式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/21/正则表达式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-redis学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -876,178 +1087,10 @@
 
 
   
-    <article id="post-gcc参数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/31/gcc参数/">gcc常用参数</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/31/gcc参数/" class="archive-article-date">
-  	<time datetime="2018-07-31T04:03:30.486Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>简介<br>gcc and g++  现在是gnu中最主要和最流行的c &amp; c++  编译器 .gcc/g++  在执行编译工作的时候，总共需要以下几步:<br>1.预处理,生成.i的文件[预处理器cpp]<br>2.将预处理后的文件不转换成汇编语言,生成文件.s[编译器egcs]<br>3.有汇编变为目标代码(机器代码)生成.o的文件[汇编器as]<br>4.连接目标代码,生成可执行程序[链接器ld]<br></p>
-        
-          <a class="article-more-a" href="/2018/07/31/gcc参数/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">gcc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/31/gcc参数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-makefile学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/makefile学习/">Makefile学习</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/makefile学习/" class="archive-article-date">
-  	<time datetime="2018-07-30T10:36:38.071Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>俗话说：</p>
-<blockquote>
-<p>makefile关系到了整个工程的编译规则。会不会写makefile，从一个侧面说明了一个人是否具备完成大型工程的能力。</p>
-</blockquote>
-<p>因为工作原因，也不得不接触Linux下程序的编译。为此，借鉴了陈皓（CSDN）的编写makefile一文加以学习。  </p>
-<hr>
-<h3 id="程序的编译和链接"><a href="#程序的编译和链接" class="headerlink" title="程序的编译和链接"></a>程序的编译和链接</h3><ul>
-<li>无论是C、C++，首先要把源文件编译成中间代码文件即Object File，这个动作叫做编译（compile）；然后再把大量的Object File合成运行文件，这个动作叫做链接（link)  </li>
-<li>编译时，编译器须要的是语法的正确，函数与变量的声明的正确。对于后者，通常是你须要告诉编译器头文件的所在位置（头文件里应该仅仅是声明，而定义应该放在C/C++文件里），仅仅要全部的语法正确，编译器就能够编译出中间目标文件。一般来说，每一个源文件都应该对应于一个中间目标文件（O文件或是OBJ文件）。  </li>
-<li>链接时，主要是链接函数和全局变量，所以，我们能够使用这些中间目标文件（O文件或是OBJ文件）来链接我们的应用程序。链接器并不管函数所在的源文件，仅仅管函数的中间目标文件（Object File），在大多数时候，由于源文件太多，编译生成的中间目标文件太多，而在链接时须要明显地指出中间目标文件名称，这对于编译非常不方便，所以，我们要给中间目标文件打个包，在Windows下这样的包叫“库文件”（Library File)，也就是 .lib 文件，在UNIX下，是Archive File，也就是 .a 文件。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/07/30/makefile学习/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/makefile学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -1165,6 +1208,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">区块链</a>
               </li>
              
@@ -1185,11 +1232,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">EFL</a>
+                <a href="javascript:void(0)" class="js-tag color3">编码</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">负载均衡</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">EFL</a>
               </li>
             
             <div class="clearfix"></div>
